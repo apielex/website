@@ -1,13 +1,13 @@
 [
   {
     "image": "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=400&h=250&fit=crop&q=80",
-    "alt": "Apielex Technologies Website",
-    "title": "Apielex Official Website",
-    "description": "The very page you are on! The official digital headquarters of Apielex Technologies, featuring a modern, highly responsive UI.",
+    "alt": "Synolaxies Technologies Website",
+    "title": "Synolaxies Official Website",
+    "description": "The very page you are on! The official digital headquarters of Synolaxies Technologies, featuring a modern, highly responsive UI.",
     "tags": ["Corporate", "Landing Page", "PWA"],
     "links": {
       "demo": { "url": "#", "disabled": false },
-      "source": { "url": "https://github.com/apielex/website" }
+      "source": { "url": "https://github.com/Synolaxies/website" }
     }
   },
   {
