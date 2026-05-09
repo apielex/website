@@ -98,5 +98,25 @@
         "url": "#"
       }
     }
+  },
+  {
+    "image": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=250&fit=crop&q=80",
+    "alt": "Eventify Planning App",
+    "title": "Eventify",
+    "description": "An upcoming all-in-one event management platform to handle guest lists, shopping tasks, budget tracking, and full event logistics.",
+    "tags": [
+      "Native App",
+      "Productivity",
+      "Upcoming"
+    ],
+    "links": {
+      "demo": {
+        "url": "#",
+        "disabled": true
+      },
+      "source": {
+        "url": "#"
+      }
+    }
   }
-]
+]
