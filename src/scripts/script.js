@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // NOTE: Replace 'YOUR_RAZORPAY_KEY_ID' with your actual Key ID from Razorpay Dashboard
     const options = {
-      "key": "rzp_live_XXXXXXXXXXXXXX", // Replace with your live key
+      "key": "rzp_test_Jvbk6GzsufGhNR", // Using provided Test Key
       "amount": "0", // Amount is in currency subunits. Default is 0 for open payment or handle via dashboard
       "currency": "INR",
       "name": "Synolaxies Studio",
