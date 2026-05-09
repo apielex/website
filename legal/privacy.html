@@ -1,51 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Synolaxies Studio</title>
+    <link rel="icon" href="../src/image/synolaxies-logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../src/styles/style.css">
+    <script>
+        (function() {
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && systemDark)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
     <style>
-        body { padding-top: 40px; line-height: 1.8; color: var(--text-light); background: #0a0a12; font-family: 'Poppins', sans-serif; }
+        :root {
+            --primary: #6c5ce7;
+            --accent: #00cec9;
+            --text: #2d3436;
+            --text-light: #636e72;
+            --bg: #fdfdff;
+            --header-bg: rgba(255, 255, 255, 0.9);
+        }
+        .dark-mode {
+            --bg: #0a0a12;
+            --text: #ffffff;
+            --text-light: #a0a0a0;
+            --header-bg: rgba(10, 10, 18, 0.9);
+        }
+        body { 
+            padding-top: 80px; 
+            line-height: 1.8; 
+            color: var(--text); 
+            background-color: var(--bg); 
+            font-family: 'Poppins', sans-serif; 
+            transition: background 0.3s, color 0.3s;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .logo span {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            color: var(--primary);
+            font-size: 1.1em;
+            letter-spacing: 1px;
+        }
         .policy-container { 
             max-width: 850px; 
             margin: 0 auto; 
             padding: 20px; 
         }
         h1 { color: var(--text); font-family: 'Orbitron', sans-serif; font-size: 2.5em; margin-top: 10px; margin-bottom: 40px; letter-spacing: 1px; border-bottom: 2px solid var(--primary); padding-bottom: 15px; }
+        .dark-mode h1 { color: #ffffff; border-bottom-color: var(--accent); }
         h2 { color: var(--primary); font-family: 'Orbitron', sans-serif; font-size: 1.5em; margin-top: 45px; margin-bottom: 20px; }
-        .back-link { display: flex; align-items: center; margin-bottom: 40px; color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1em; transition: 0.3s; }
-        .back-link:hover { transform: translateX(-8px); filter: brightness(1.2); }
-        .last-updated { display: block; color: var(--text-light); opacity: 0.6; font-size: 0.9em; margin-bottom: 5px; font-weight: 400; }
-        p { margin-bottom: 20px; font-size: 1.05em; }
+        .dark-mode h2 { color: var(--accent); }
+        .back-link { display: flex; align-items: center; margin-bottom: 30px; color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1em; transition: 0.3s; }
+        .back-link:hover { transform: translateX(-8px); }
+        .last-updated { display: block; color: var(--primary); font-size: 0.95em; margin-bottom: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .dark-mode .last-updated { color: var(--accent); }
+        p { margin-bottom: 20px; font-size: 1.05em; color: var(--text-light); }
+        .dark-mode p { color: #d0d0d0; }
         strong { color: var(--primary); }
+        .dark-mode strong { color: var(--accent); }
     </style>
 </head>
+
 <body>
+    <header>
+        <div class="header-container">
+            <a href="../" class="logo">
+                <img src="../src/image/synolaxies-logo.png" alt="Logo">
+                <span>Synolaxies</span>
+            </a>
+        </div>
+    </header>
     <div class="container">
         <div class="policy-container">
             <a href="../" class="back-link"><i class="fas fa-arrow-left" style="margin-right: 12px;"></i> Back to Home</a>
             <span class="last-updated">Last updated: May 09, 2026</span>
             <h1>Privacy Policy</h1>
-            
-            <p>Welcome to Synolaxies Studio. We respect your privacy and are committed to protecting your personal data.</p>
-            
+
+            <p>Welcome to Synolaxies Studio. We respect your privacy and are committed to protecting your personal data.
+            </p>
+
             <h2>1. Information We Collect</h2>
-            <p>We may collect personal information such as your name, email address, and contact details when you use our contact form or make a contribution through our payment gateway.</p>
-            
+            <p>We may collect personal information such as your name, email address, and contact details when you use
+                our contact form or make a contribution through our payment gateway.</p>
+
             <h2>2. How We Use Your Information</h2>
-            <p>We use your information to provide our services, process payments, and communicate with you about your projects or support.</p>
-            
+            <p>We use your information to provide our services, process payments, and communicate with you about your
+                projects or support.</p>
+
             <h2>3. Data Security</h2>
-            <p>We implement appropriate security measures to protect your personal information. All payments are processed securely through Razorpay.</p>
-            
+            <p>We implement appropriate security measures to protect your personal information. All payments are
+                processed securely through Razorpay.</p>
+
             <h2>4. Third-Party Services</h2>
-            <p>Our website may contain links to third-party sites (like GitHub or Razorpay). We are not responsible for their privacy practices.</p>
-            
+            <p>Our website may contain links to third-party sites (like GitHub or Razorpay). We are not responsible for
+                their privacy practices.</p>
+
             <h2>5. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us at <strong>synolaxies@gmail.com</strong>.</p>
+            <p>If you have any questions about this Privacy Policy, please contact us at
+                <strong>synolaxies@gmail.com</strong>.</p>
         </div>
     </div>
 </body>
+
 </html>
