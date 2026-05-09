@@ -279,29 +279,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
-  // ========== Payment System ==========
+  // ========== Payment System (Razorpay SDK) ==========
   const paymentBtn = document.getElementById('payment-btn');
 
   const handlePayment = (event) => {
-    // Prevent any default browser action, which is good practice for buttons.
     if(event) event.preventDefault();
 
-    const razorpayUrl = 'https://razorpay.me/@synolaxies';
-
-    // Try to open the payment link in a new tab. 'noopener' and 'noreferrer' are for security.
-    const newWindow = window.open(razorpayUrl, '_blank', 'noopener,noreferrer');
-
-    // Check if the new window was blocked by a popup blocker.
-    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-      // If blocked, inform the user and redirect the current page as a fallback.
-      alert('Payment page may be blocked by a pop-up blocker. We will redirect you now.');
-      window.location.href = razorpayUrl;
-    } else {
-      // If the new tab opened successfully, show the "redirecting" modal on this page.
-      setTimeout(() => { // Use a small timeout for a smoother feel
+    // NOTE: Replace 'YOUR_RAZORPAY_KEY_ID' with your actual Key ID from Razorpay Dashboard
+    const options = {
+      "key": "rzp_live_XXXXXXXXXXXXXX", // Replace with your live key
+      "amount": "0", // Amount is in currency subunits. Default is 0 for open payment or handle via dashboard
+      "currency": "INR",
+      "name": "Synolaxies Studio",
+      "description": "Support Synolaxies Studio",
+      "image": "https://synolaxies.github.io/website/src/image/synolaxies-logo.png",
+      "handler": function (response) {
+        // This function executes after a successful payment
         closeSupportModal();
         paymentSuccess();
-      }, 100);
+      },
+      "prefill": {
+        "name": "",
+        "email": "",
+        "contact": ""
+      },
+      "theme": {
+        "color": "#6c5ce7"
+      }
+    };
+
+    try {
+      const rzp1 = new Razorpay(options);
+      rzp1.open();
+    } catch (error) {
+      console.error("Razorpay SDK failed to load, falling back to link:", error);
+      // Fallback to the hosted payment link if SDK fails
+      const razorpayUrl = 'https://razorpay.me/@synolaxies';
+      window.open(razorpayUrl, '_blank', 'noopener,noreferrer');
     }
   };
 
