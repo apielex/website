@@ -599,6 +599,12 @@ header .logo-container {
       word-break: break-all;
     }
 
+    .section-title {
+      text-align: center;
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+
     /* FAQ Section */
     .faq-section {
       padding: 4rem 0;

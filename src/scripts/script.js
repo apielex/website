@@ -209,10 +209,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
       e.preventDefault();
       const item = summary.parentElement;
+      const isOpen = item.hasAttribute('open');
 
-      // If this item is already open, close it.
-      if (item.hasAttribute('open')) {
+      // Close all other FAQ items for a clean accordion effect
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.removeAttribute('open');
+        }
+      });
+
+      // Toggle the clicked item
+      if (isOpen) {
         item.removeAttribute('open');
+      } else {
+        item.setAttribute('open', '');
       }
     });
   }
