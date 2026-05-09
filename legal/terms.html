@@ -7,18 +7,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../src/styles/style.css">
     <style>
-        body { padding-top: 100px; line-height: 1.8; color: var(--text-light); }
-        .policy-container { max-width: 800px; margin: 0 auto; padding: 40px 20px; background: rgba(255, 255, 255, 0.05); border-radius: 20px; backdrop-filter: blur(10px); }
-        h1, h2 { color: var(--text); font-family: 'Orbitron', sans-serif; margin-top: 30px; }
-        .back-link { display: inline-block; margin-bottom: 20px; color: var(--primary); text-decoration: none; font-weight: 600; }
+        body { padding-top: 40px; line-height: 1.8; color: var(--text-light); background: #0a0a12; font-family: 'Poppins', sans-serif; }
+        .policy-container { 
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        h1 { color: var(--text); font-family: 'Orbitron', sans-serif; font-size: 2.5em; margin-top: 10px; margin-bottom: 40px; letter-spacing: 1px; border-bottom: 2px solid var(--primary); padding-bottom: 15px; }
+        h2 { color: var(--primary); font-family: 'Orbitron', sans-serif; font-size: 1.5em; margin-top: 45px; margin-bottom: 20px; }
+        .back-link { display: flex; align-items: center; margin-bottom: 40px; color: var(--primary); text-decoration: none; font-weight: 600; font-size: 1em; transition: 0.3s; }
+        .back-link:hover { transform: translateX(-8px); filter: brightness(1.2); }
+        .last-updated { display: block; color: var(--text-light); opacity: 0.6; font-size: 0.9em; margin-bottom: 5px; font-weight: 400; }
+        p { margin-bottom: 20px; font-size: 1.05em; }
+        strong { color: var(--primary); }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="policy-container">
-            <a href="../" class="back-link"><i class="fas fa-arrow-left" style="margin-right: 8px;"></i> Back to Home</a>
+            <a href="../" class="back-link"><i class="fas fa-arrow-left" style="margin-right: 12px;"></i> Back to Home</a>
+            <span class="last-updated">Last updated: May 09, 2026</span>
             <h1>Terms & Conditions</h1>
-            <p>Last updated: May 09, 2026</p>
             
             <h2>1. Agreement to Terms</h2>
             <p>By accessing our website and using our services, you agree to be bound by these Terms and Conditions.</p>
