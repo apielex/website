@@ -294,39 +294,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const handlePayment = (event) => {
     if (event) event.preventDefault();
-
-    // NOTE: Replace 'YOUR_RAZORPAY_KEY_ID' with your actual Key ID from Razorpay Dashboard
-    const options = {
-      "key": "rzp_test_Jvbk6GzsufGhNR", // Using provided Test Key
-      "amount": "0", // Amount is in currency subunits. Default is 0 for open payment or handle via dashboard
-      "currency": "INR",
-      "name": "Synolaxies Studio",
-      "description": "Support Synolaxies Studio",
-      "image": "https://synolaxies.github.io/website/src/image/synolaxies-logo.jpg",
-      "handler": function (response) {
-        // This function executes after a successful payment
-        closeSupportModal();
-        paymentSuccess();
-      },
-      "prefill": {
-        "name": "",
-        "email": "",
-        "contact": ""
-      },
-      "theme": {
-        "color": "#6c5ce7"
-      }
-    };
-
-    try {
-      const rzp1 = new Razorpay(options);
-      rzp1.open();
-    } catch (error) {
-      console.error("Razorpay SDK failed to load, falling back to link:", error);
-      // Fallback to the hosted payment link if SDK fails
-      const razorpayUrl = 'https://razorpay.me/@synolaxies';
-      window.open(razorpayUrl, '_blank', 'noopener,noreferrer');
-    }
+    const razorpayUrl = 'https://razorpay.me/@synolaxies';
+    window.open(razorpayUrl, '_blank', 'noopener,noreferrer');
+    closeSupportModal();
   };
 
   if (paymentBtn) {

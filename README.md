@@ -1,7 +1,5 @@
 # Synolaxies Studio Official Website
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 A modern, responsive, and feature-rich landing page designed to help creators receive financial support for their work. Built with vanilla HTML, CSS, and JavaScript, it's lightweight, easy to customize, and integrated with Razorpay for seamless payments.
 
 **➡️ [View Live Demo](https://synolaxies.github.io/website/)**
@@ -106,7 +104,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## 📄 License
 
-Distributed under the MIT License. See `LICENSE` file for more information.
+Copyright © 2025 Synolaxies Studio. All Rights Reserved. Unauthorised copying, distribution, or use of this code is strictly prohibited.
 
 ---
 
